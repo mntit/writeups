@@ -15,7 +15,7 @@ Tools such as `ffuf` provide us with a handy automated way to fuzz the web appli
 To install ffuf you can use "`apt install ffuf -y`" or download it and use it from its [GitHub Repo](https://github.com/ffuf/ffuf.git)
 and type `ffuf -h`
 
-![[Pasted image 20250819234013.png]]
+![Uploading Screenshot 2025-08-19 233919.png…]()
 
 # Directory Fuzzing
 
