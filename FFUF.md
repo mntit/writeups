@@ -15,8 +15,6 @@ Tools such as `ffuf` provide us with a handy automated way to fuzz the web appli
 To install ffuf you can use "`apt install ffuf -y`" or download it and use it from its [GitHub Repo](https://github.com/ffuf/ffuf.git)
 and type `ffuf -h`
 
-![Uploading Screenshot 2025-08-19 233919.png…]()
-
 # Directory Fuzzing
 
 As we can see from the example above, the main two options are `-w` for wordlists and `-u` for the URL. We can assign a wordlist to a keyword to refer to it where we want to fuzz. For example, we can pick our wordlist and assign the keyword `FUZZ` to it by adding `:FUZZ` after it:
@@ -30,8 +28,6 @@ Now, let's start our target in the question below and run our final command on i
 ```sh
 ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt:FUZZ -u http://$target/FUZZ
 ```
-
-![[Pasted image 20250819234756.png]]
 
 We can even make it go faster if we are in a hurry by increasing the number of threads to 200, for example, with `-t 200`, but this is not recommended, especially when used on a remote site, as it may disrupt it, and cause a `Denial of Service`, or bring down your internet connection in severe cases. 
 
@@ -51,8 +47,6 @@ Now, we can rerun our command, carefully placing our `FUZZ` keyword where the ex
 ffuf -w /usr/share/seclists/Discovery/Web-Content/web-extensions.txt:FUZZ -u http://$target/indexFUZZ
 ```
 
-![[Pasted image 20250820000627.png]]
-
 ## Page Fuzzing
 
 We will now use the same concept of keywords we've been using with `ffuf`, use `.php` as the extension, place our `FUZZ` keyword where the filename should be, and use the same wordlist we used for fuzzing directories:
@@ -60,7 +54,3 @@ We will now use the same concept of keywords we've been using with `ffuf`, use `
 ```sh
 ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt:FUZZ -u http://$target/FUZZ.php
 ```
-
-![[Pasted image 20250820000943.png]]
-
-
