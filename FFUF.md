@@ -1,5 +1,3 @@
-#fuzzing
-
 There are many tools and methods to utilize for directory and parameter fuzzing/brute-forcing. In this module we will mainly focus on the [ffuf](https://github.com/ffuf/ffuf) tool for web fuzzing, as it is one of the most common and reliable tools available for web fuzzing.
 
 The following topics will be discussed:
